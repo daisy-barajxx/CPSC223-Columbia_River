@@ -1,18 +1,18 @@
-Cowiltz R, Length: 169 km, Discharge: 286.6 m³/s
-Lewis R, Length: 153 km, Discharge: 173.4 m³/s
-Willamette R, Length: 301 km, Discharge: 1098.7 m³/s
-Bonneville Dam, Height: 197 ft, Year: 1937/1981
-The Dalles Dam, Height: 260 ft, Year: 1957
-Deschutes R, Length: 406 km, Discharge: 215.7 m³/s
-John Day Dam, Height: 184 ft, Year: 1971
-McNary Dam, Height: 183 ft, Year: 1954
-Snake River, Length: 1735 km, Discharge: 1755.6 m³/s
-Yakima R, Length: 344 km, Discharge: 100.3 m³/s
-Priest Rapids Dam, Height: 178 ft, Year: 1961
-Wanapum Dam, Height: 185 ft, Year: 1963
-Rock Island Dam, Height: 135 ft, Year: 1933
-Rocky Reach Dam, Height: 130 ft, Year: 1961
-Wells Dam, Height: 160 ft, Year: 1961
-Chief Joseph Dam, Height: 236 ft, Year: 1955
-Grand Coulee Dam, Height: 550 ft, Year: 1941/1974
-Spokane R, Length: 179 km, Discharge: 228.6 m³/s
+Cowiltz tributary 169 286.6
+Lewis tributary 153 173.4
+Willamette tributary 301 1098.7
+Bonneville dam 197 1937/1981
+The'Dalles dam 260 1957
+Deschutes tributary 406 215.7
+John'Day dam 184 1971
+McNary dam 183 1954
+Snake tributary 1735 1755.6
+Yakima tributary 344 100.3
+Priest'Rapids dam 178 1961
+Wanapum dam 185 1963
+Rock'Island dam 135 1933
+Rocky'Reach dam 130 1961
+Wells dam 16 1961
+Chief'Joseph dam 236 1955
+Grand'Coulee dam 550 1941/1974
+Spokane tributary 179 228.6
