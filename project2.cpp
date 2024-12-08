@@ -158,7 +158,7 @@ void BinaryTree::traverseControlled() {
             cout<<endl<<endl;
 
             // Provide navigation options
-            cout << "Enter 1 to Go Backward, 2 to Go Forward, 3 to Exit: ";
+            cout << "Enter 1 to Go Backward, 2 to Go Forward, 3 to Exit the navigation: ";
             int choice;
             cin >> choice;
 
