@@ -326,11 +326,15 @@ void BinaryTree::menu() {
 }
 
 void BinaryTree::map(){
-    cout << "                                                                              /------------| |---------| |--------------| |--------" << endl;
+    cout << "                                                                              /------------| |---------| |--------------| |-----------------------" << endl;
     cout << "                                                                             /           (Wells)  (Chief'Joseph)   (Grand'Coulee)"<< endl;
-    cout << "                                                                            /   /----------| |---------| |--------------| |-------"<< endl;
-    cout << "                                                                           /   / "<< endl;
-    cout << "                                                                          /   /"<< endl;
+    cout << "                                                                            /   /----------| |---------| |--------------| |---------\\  \\------------"<< endl;
+    cout << "                                                                           /   /                                                     \\  \\           " << endl;
+    cout << "                                                                          /   /                                                       \\  \\           " << endl;
+    cout << "                                                                         /   /                                                         \\  \\           " << endl;
+    cout << "                                                                        /   /                                                           (Spokane)"<<endl;
+    cout << "                                                                       /   / "<< endl;
+    cout << "                                                                      /   /"<< endl;
     cout << "                                                                     --------"<< endl;
     cout << "                                                                    (Rocky'Reach)"<< endl;
     cout << "                                                                       --------"<< endl;
@@ -370,6 +374,5 @@ void BinaryTree::map(){
     cout << "                      \\ \\                               (Deschutes)"<< endl;
     cout << "                    (Willamette)"<< endl;
 }
-
 
 
