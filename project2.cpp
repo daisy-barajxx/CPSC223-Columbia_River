@@ -145,17 +145,34 @@ void BinaryTree::traverseControlled() {
         while (!exit) {
             // Display current node information
             current = visitedNodes[currentIndex];
-            cout<<endl<<endl;
+            cout << endl << endl;
             cout << "Current node: " << current->name << endl;
-            cout<<endl<<endl;
+            cout << endl << endl;
+
+            // Handle tributary type
             if (current->type == "tributary") {
-                cout << "Name: " << current->name << ", Type: " << current->type 
-                     << ", Length: " << current->length << ", Discharge: " << current->discharge << endl;
-            } else if (current->type == "dam") {
-                cout << "Name: " << current->name << ", Type: " << current->type 
-                     << ", Height: " << current->height << ", Year: " << current->year << endl;
+                bool validOption = false;
+                while (!validOption) { // Loop until the user inputs a valid option
+                    cout << "You have reached a tributary (" << current->name << "). Do you want to visit? ((Y or y) to visit or (N or n) to not visit)" << endl;
+                    char option;
+                    cin >> option;
+
+                    if (option == 'Y' || option == 'y') {
+                        cout << "Name: " << current->name << ", Type: " << current->type
+                            << ", Length: " << current->length << ", Discharge: " << current->discharge << endl;
+                        validOption = true; // Exit the loop
+                    } else if (option == 'N' || option == 'n') {
+                        cout << "Skipping detailed information of tributary." << endl;
+                        validOption = true; // Exit the loop
+                    } else {
+                        cout << "Please input the correct option (Y/y or N/n).\n" << endl;
+                    }
+                }
+            } else if (current->type == "dam") { // Handle dam type
+                cout << "Name: " << current->name << ", Type: " << current->type
+                    << ", Height: " << current->height << ", Year: " << current->year << endl;
             }
-            cout<<endl<<endl;
+            cout << endl << endl;
 
             // Provide navigation options
             cout << "Enter 1 to Go Backward, 2 to Go Forward, 3 to Exit the navigation: ";
@@ -173,7 +190,7 @@ void BinaryTree::traverseControlled() {
                 case 1: { // Go backward
                     cout<<endl<<endl;
                     if (currentIndex == 0) {
-                        cout << "There is no more dam and tributary before." << endl;
+                        cout << "You have reached the start of the Columbia River nodes." << endl;
                         cout<<endl<<endl;
                     } else {
                         currentIndex--; // Move to the previous node
@@ -183,7 +200,7 @@ void BinaryTree::traverseControlled() {
                 case 2: { // Go forward
                     cout<<endl<<endl;
                     if (currentIndex == visitedNodes.size() - 1) {
-                        cout << "There is no more dam and tributary after." << endl;
+                        cout << "You have reached the end of the Columbia River nodes." << endl;
                         cout<<endl<<endl;
                     } else {
                         currentIndex++; // Move to the next node
@@ -200,7 +217,6 @@ void BinaryTree::traverseControlled() {
                 }
             }
         }
-
         break; // Exit the input loop after successful navigation
     }
 }
@@ -279,6 +295,13 @@ void BinaryTree::menu() {
         int choice;
         cin >> choice;
 
+        if (cin.fail() || choice < 1 || choice > 4) {
+            cin.clear(); // clear the incorrect input
+            cin.ignore(numeric_limits<streamsize>::max(), '\n'); // give up the incorrect input
+            cout << "Invalid input. Please enter a number between 1 and 4." << endl;
+            continue; // back to menu
+        }
+
         switch (choice) {
         case 1: // Display all data
             displayAll();
@@ -290,10 +313,17 @@ void BinaryTree::menu() {
                 cout << "\nTravel Menu:" << endl;
                 cout << "1. Display All datas" << endl;
                 cout << "2. Start Travel" << endl;
-                cout << "3. Exit" << endl;
+                cout << "3. Exit the navigation" << endl;
                 cout << "Enter your choice: ";
                 int travelChoice;
                 cin >> travelChoice;
+
+                if (cin.fail() || choice < 1 || choice > 4) {
+                    cin.clear(); // clear the incorrect input
+                    cin.ignore(numeric_limits<streamsize>::max(), '\n'); // give up the incorrect input
+                    cout << "Invalid input. Please enter a number between 1 and 3." << endl;
+                    continue; // back to menu
+                }
 
                 switch (travelChoice) {
                 case 1: // Display all data
